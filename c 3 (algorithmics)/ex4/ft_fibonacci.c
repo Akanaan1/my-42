@@ -6,12 +6,11 @@
 /*   By: akanaan <akanaan@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 14:09:26 by akanaan           #+#    #+#             */
-/*   Updated: 2025/10/28 15:26:25 by akanaan          ###   ########.fr       */
+/*   Updated: 2025/10/28 18:07:47 by akanaan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-// #include <stdio.h>
 
 int	ft_fibonacci(int index)
 {
@@ -35,6 +34,6 @@ int	ft_fibonacci(int index)
 /*
 int	main(void)
 {
-	printf("%d",ft_fibonacci(3));
+	printf("%d",ft_fibonacci(5));
 }
 */

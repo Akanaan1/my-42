@@ -6,12 +6,11 @@
 /*   By: akanaan <akanaan@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 18:21:02 by akanaan           #+#    #+#             */
-/*   Updated: 2025/10/27 19:00:42 by akanaan          ###   ########.fr       */
+/*   Updated: 2025/10/28 18:05:39 by akanaan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-//#include <stdio.h>
 
 int	ft_recursive_factorial(int nb)
 {
