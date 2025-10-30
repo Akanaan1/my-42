@@ -6,10 +6,12 @@
 /*   By: akanaan <akanaan@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 17:12:35 by akanaan           #+#    #+#             */
-/*   Updated: 2025/10/30 15:32:55 by akanaan          ###   ########.fr       */
+/*   Updated: 2025/10/30 16:46:45 by akanaan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
+
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {
 	*div = a / b;

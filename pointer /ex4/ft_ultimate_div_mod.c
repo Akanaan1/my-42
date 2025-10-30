@@ -6,7 +6,7 @@
 /*   By: akanaan <akanaan@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 17:15:35 by akanaan           #+#    #+#             */
-/*   Updated: 2025/10/30 15:55:01 by akanaan          ###   ########.fr       */
+/*   Updated: 2025/10/30 16:47:27 by akanaan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_ultimate_div_mod(int *a, int *b)
 	int	d;
 
 	c = *a / *b;
-	*a = c;
 	d = *a % *b;
+	*a = c;
 	*b = d;
 }
