@@ -6,7 +6,7 @@
 /*   By: akanaan <akanaan@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 19:34:43 by akanaan           #+#    #+#             */
-/*   Updated: 2025/11/03 18:04:49 by akanaan          ###   ########.fr       */
+/*   Updated: 2025/11/04 19:53:54 by akanaan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strupcase(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] >= 97)
+		if ((str[i] >= 97) && (str[i] <= 122))
 		{
 			str[i] = str[i] - 32 ;
 		}

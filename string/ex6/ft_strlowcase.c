@@ -6,7 +6,7 @@
 /*   By: akanaan <akanaan@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 18:05:30 by akanaan           #+#    #+#             */
-/*   Updated: 2025/11/03 18:12:59 by akanaan          ###   ########.fr       */
+/*   Updated: 2025/11/04 19:54:04 by akanaan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strlowcase(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] <= 90)
+		if ((str[i] >= 'A' ) && (str[i] <= 'Z'))
 		{
 			str[i] = str[i] + 32 ;
 		}
