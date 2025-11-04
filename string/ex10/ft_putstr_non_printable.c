@@ -1,36 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akanaan <akanaan@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/02 19:24:48 by akanaan           #+#    #+#             */
-/*   Updated: 2025/11/04 18:33:14 by akanaan          ###   ########.fr       */
+/*   Created: 2025/11/04 17:13:57 by akanaan           #+#    #+#             */
+/*   Updated: 2025/11/04 17:34:03 by akanaan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-// #include <stdio.h>
 
-int	ft_str_is_printable(char *str)
+void	ali(char a)
 {
-	int	i;
+	write (1, &a, 1);
+}
 
-	i = 0;
-	while (str[i] != '\0')
+void	al(char a)
+{
+	char	*hexa;
+
+	hexa = "0123456789abcdef";
+	ali(hexa[a / 16]);
+	ali(hexa[a % 16]);
+}
+
+void	ft_putstr_non_printable(char *str)
+{
+	int	b;
+
+	b = 0;
+	while (str[b] != '\0')
 	{
-		if (!((str[i] >= 32) && (str[i] <= 126)))
-			return (0);
-		i++;
+		if (str[b] >= 0 && str[b] <= 31)
+		{
+			write (1, "\\", 1);
+			al(str[b]);
+		}
+		else
+		{
+			ali(str[b]);
+		}
+		b++;
 	}
-	return (1);
 }
 /*
 int	main(void)
 {
-	char	arr[]="jkfjyh-:FLDSKVDSV>V?XZ>LWOI)#68-P+[€4bjhbuguy";
-
-	printf("%d", ft_str_is_printable(arr));
+	ft_putstr_non_printable("Hello\nhow are you ?");
 }
 */

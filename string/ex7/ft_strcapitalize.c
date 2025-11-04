@@ -5,59 +5,45 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akanaan <akanaan@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 18:21:15 by akanaan           #+#    #+#             */
-/*   Updated: 2025/11/03 19:22:35 by akanaan          ###   ########.fr       */
+/*   Created: 2025/11/04 16:13:25 by akanaan           #+#    #+#             */
+/*   Updated: 2025/11/04 17:37:41 by akanaan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
+// #include <stdio.h>
 
 char	*ft_strcapitalize(char *str)
 {
-	int	i;
+	int	b;
+	int	a;
 
-	i = 0;
-	while (str[i] != '\0')
+	b = 0;
+	while (str[b] != '\0')
 	{
-		if ((str[i] >= 65) && (str[i] <= 90))
+		if (str[b] >= 'A' && str[b] <= 'Z')
 		{
-			str[i] = str[i] + 32;
+			str[b] = str[b] + 32;
 		}
-		if (str[0] >= 97)
-		{
-			str[0] = str[0] -32;
-			i++;
-		}
-		if ((str[i] <= 64) && (str[i] >= 33))
-		{
-			i++;
-			if (str[i] == 32)
-			{
-				i++;
-				if ((str[i] >= 97) && (str[i] <= 122))
-				{
-					str[i] = str[i] - 32 ;
-				}
-			}
-		}
-		if (str[i] == 32)
-                        {
-                                i++;
-                                if ((str[i] >= 97) && (str[i] <= 122))
-                                {
-                                        str[i] = str[i] - 32 ;
-                                }
-                        }
-
-		i++;
+		b++;
+	}
+	a = 0;
+	while (str[a] != '\0')
+	{
+		if (!(str[a - 1] >= 'a' && str [a - 1] <= 'z'))
+			if (!(str [a - 1] >= 'A' && str [a - 1] <= 'Z'))
+				if (!(str [a - 1] >= '0' && str [a - 1] <= '9'))
+					if (str[a] >= 'a' && str[a] <= 'z')
+						str[a] = str[a] - 32;
+		a++;
 	}
 	return (str);
 }
-
+/*
 int	main(void)
 {
-	char	arr[] = "hello, how are you doing? 42words forty-two; fifty+and+one";
+	char	c[]= "hello, how are you doing? 42words forty-two; fifty+and+one";
 
-	printf("%s", ft_strcapitalize(arr));
+	printf("%s", ft_strcapitalize(c));
 }
+*/

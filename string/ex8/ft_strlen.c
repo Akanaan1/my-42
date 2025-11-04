@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akanaan <akanaan@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/02 19:24:48 by akanaan           #+#    #+#             */
-/*   Updated: 2025/11/04 18:33:14 by akanaan          ###   ########.fr       */
+/*   Created: 2025/11/04 17:00:50 by akanaan           #+#    #+#             */
+/*   Updated: 2025/11/04 17:08:10 by akanaan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 // #include <stdio.h>
 
-int	ft_str_is_printable(char *str)
+int	ft_strlen(char *str)
 {
-	int	i;
+	int	a;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (!((str[i] >= 32) && (str[i] <= 126)))
-			return (0);
-		i++;
-	}
-	return (1);
+	a = 0;
+	while (str[a] != '\0')
+		a++;
+	return (a);
 }
 /*
 int	main(void)
 {
-	char	arr[]="jkfjyh-:FLDSKVDSV>V?XZ>LWOI)#68-P+[€4bjhbuguy";
+	char	b[] = "cnlsbvjnkndvk";
 
-	printf("%d", ft_str_is_printable(arr));
+	printf("%d", ft_strlen(b));
 }
 */
