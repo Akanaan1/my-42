@@ -6,7 +6,7 @@
 /*   By: akanaan <akanaan@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 17:13:57 by akanaan           #+#    #+#             */
-/*   Updated: 2025/11/04 19:54:40 by akanaan          ###   ########.fr       */
+/*   Updated: 2025/11/04 20:31:43 by akanaan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_putstr_non_printable(char *str)
 	b = 0;
 	while (str[b] != '\0')
 	{
-		if (str[b] >= 0 && str[b] <= 31)
+		if ((str[b] >= 0) && (str[b] <= 31) || (str[b] == 127))
 		{
 			write (1, "\\", 1);
 			al(str[b]);
